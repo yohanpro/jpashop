@@ -12,7 +12,7 @@ import java.util.List;
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
 public class ItemService {
-    private ItemRepository itemRepository;
+    private final ItemRepository itemRepository;
 
     @Transactional(readOnly = false)
     public void saveItem(Item item) {

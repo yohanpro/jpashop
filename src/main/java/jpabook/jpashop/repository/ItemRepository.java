@@ -1,6 +1,7 @@
 package jpabook.jpashop.repository;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import jpabook.jpashop.domain.item.Item;
 import org.springframework.stereotype.Repository;
 
@@ -9,6 +10,7 @@ import java.util.List;
 @Repository
 public class ItemRepository {
 
+    @PersistenceContext
     private EntityManager em;
 
     public void save(Item item) {
